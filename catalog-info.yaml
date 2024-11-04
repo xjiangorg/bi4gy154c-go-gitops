@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: bi4gy154c-go-gitops
+  description: This is GitOps manifest for bi4gy154c-go   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-name: bi4gy154c-go
+    backstage.io/kubernetes-id: bi4gy154c-go 
+    backstage.io/techdocs-ref: dir:. 
+    janus-idp.io/tekton: bi4gy154c-go   
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:bi4gy154c-go
